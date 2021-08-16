@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.contents {
+    background-color: #A1CF6B;
+    padding: 2% 10%;
+    font-family: 'Lato', sans-serif;
+}
+.contents h2 {
+    font-size: 32px;
+    margin: 0;
+}
+cocktail-list {
+    padding: 16px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-gap: 32px;
+}
+.cocktails {
+    background-color: white;    
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 5px 8px 10px rgba(0,0,0,0.5);
+    margin: 10px 0;
+}
+.cocktails img {
+    width: 250px;
+    border-radius: 8px 8px 0 0;
+}
+.cocktails h3 {
+    padding: 16px 0;
+    margin: 0;
+    font-size: 24px;
+}
+.cocktails button {
+    background-color: #75DBCD;
+    padding: 8px 16px;
+    margin: 16px 0 16px 0;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.cocktails button:hover {
+    background-color: #5DAD9A;
+    cursor: pointer;
+}

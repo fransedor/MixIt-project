@@ -1,0 +1,26 @@
+@import "./header.css";
+@import "./hero.css";
+@import "./contents.css";
+* {
+    box-sizing: border-box;
+}
+.contents {
+    background-color: #A1CF6B;
+    padding: 2% 10%;
+    font-family: 'Lato', sans-serif;
+}
+
+cocktail-list {
+    padding: 16px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-gap: 32px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFD460;
+
+}

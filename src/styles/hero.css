@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.hero {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    width: 70%;
+    margin: 40px auto;
+    height: 400px;
+}
+.hero h1 {
+    margin: 0;
+    padding: 20px 40px;
+    color: black;
+}
+.search input {
+    width: 50%;
+    font-size: 20px;
+    border: none;
+    padding: 12px 24px;
+    margin: 40px 0px;
+    border-radius: 16px;
+}
+.search input:focus {
+    outline: none;
+}
+.search button {
+    font-size: 20px;
+    border-radius: 16px;
+    padding: 12px 24px;
+    background-color: #75DBCD;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+.search button:hover {
+    background-color: #5DAD9A;
+    cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+    .hero {
+        font-size: 24px;
+        height: auto;
+    }
+}

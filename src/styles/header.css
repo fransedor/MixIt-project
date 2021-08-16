@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+header {
+    font-family: 'MonteCarlo', cursive;
+    font-size: 40px;
+}
+header p {
+    padding: 8px 40px;
+    margin: 0;
+}
