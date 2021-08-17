@@ -11,5 +11,15 @@ class DataSource {
         })
         
     }
+
+    static drinkDetails(drinkId) {
+        return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(responseJSON => {
+            return Promise.resolve(responseJSON.drinks);
+        })
+    }
 }
 export default DataSource;

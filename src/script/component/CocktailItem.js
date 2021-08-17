@@ -3,6 +3,13 @@ class CocktailItem extends HTMLElement {
         this._drink = drink;
         this.render();
     }
+    set clickEvent(event) {
+        this._clickEvent = event;
+        this.render();
+    }
+    get drinkId() {
+        return this._drink.idDrink;
+    }
     render() {
         this.innerHTML = `
         <style>
@@ -20,7 +27,7 @@ class CocktailItem extends HTMLElement {
         cocktail-item h3 {
             padding: 16px 0;
             margin: 0;
-            font-size: 20px;
+            font-size: 16px;
         }
         cocktail-item button {
             background-color: #75DBCD;
@@ -39,7 +46,9 @@ class CocktailItem extends HTMLElement {
     
         <img src=${this._drink.strDrinkThumb} alt="cocktail-name">
         <h3>${this._drink.strDrink}</h3>
-        <button>Make this</button>`
+        <button id="drink-details">Make this</button>`
+
+        this.querySelector('#drink-details').addEventListener('click', this._clickEvent);
     }
 }
 customElements.define('cocktail-item', CocktailItem);

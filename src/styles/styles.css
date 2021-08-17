@@ -1,6 +1,7 @@
 @import "./header.css";
 @import "./hero.css";
 @import "./contents.css";
+@import "./details.css";
 * {
     box-sizing: border-box;
 }

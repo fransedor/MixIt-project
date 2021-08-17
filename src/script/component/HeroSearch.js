@@ -1,7 +1,7 @@
 class HeroSearch extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+    // connectedCallback() {
+    //     this.render();
+    // }
     set clickEvent(event) {
         this._clickEvent = event;
         this.render();

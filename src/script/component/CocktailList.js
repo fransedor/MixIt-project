@@ -1,6 +1,9 @@
 import "./CocktailItem.js";
+import DataSource from "../data/DataSource.js";
+import "./CocktailDetails.js";
 
 class CocktailList extends HTMLElement {
+    
     
     set drinks(drinks) {
         this._drinks = drinks;
@@ -10,10 +13,17 @@ class CocktailList extends HTMLElement {
         this.innerHTML = "";
         
         
-        console.log(this._drinks);
         this._drinks.forEach(drink => {
             const cocktails = document.createElement('cocktail-item');
             cocktails.drink = drink;
+            cocktails.clickEvent = () => {
+                DataSource.drinkDetails(cocktails.drinkId)
+                .then(result => {
+                    const cocktailDetails = document.createElement('cocktail-details');
+                    cocktailDetails.details = result;
+                    console.log(cocktailDetails.details);
+                    document.body.appendChild(cocktailDetails);
+                })}
             this.appendChild(cocktails);
         });
 
