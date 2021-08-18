@@ -1,15 +1,13 @@
-var $ = require('jquery');
 class HeroSearch extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+    // connectedCallback() {
+    //     this.render();
+    // }
     set clickEvent(event) {
         this._clickEvent = event;
         this.render();
     }
     get value() {
-        // return this.querySelector('#ingredient').value;
-        return $("#ingredient").prop("value");
+        return this.querySelector('#ingredient').value;
     }
     render() {
         this.innerHTML = `
@@ -43,7 +41,7 @@ class HeroSearch extends HTMLElement {
                 <input type="search" name="Ingredient" id="ingredient" placeholder="Ingredients...">
                 <button id="searchIngredient" type="submit">Search</button>
         </div>`
-        $("#searchIngredient").on('click', this._clickEvent);
+        this.querySelector('#searchIngredient').addEventListener('click', this._clickEvent);
     }
 }
 customElements.define('hero-search', HeroSearch);
