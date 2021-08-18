@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 class CocktailItem extends HTMLElement {
     set drink(drink) {
         this._drink = drink;

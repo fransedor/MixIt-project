@@ -1,9 +1,8 @@
 import "./CocktailItem.js";
 import DataSource from "../data/DataSource.js";
 import "./CocktailDetails.js";
-
+var $ = require('jquery')
 class CocktailList extends HTMLElement {
-    
     
     set drinks(drinks) {
         this._drinks = drinks;
@@ -21,10 +20,9 @@ class CocktailList extends HTMLElement {
                 .then(result => {
                     const cocktailDetails = document.createElement('cocktail-details');
                     cocktailDetails.details = result;
-                    console.log(cocktailDetails.details);
-                    document.body.appendChild(cocktailDetails);
+                    $('body').append(cocktailDetails);
                 })}
-            this.appendChild(cocktails);
+            $(this).append(cocktails);
         });
 
     }

@@ -1,13 +1,11 @@
 import '../component/HeroSearch.js';
 import DataSource from '../data/DataSource.js';
 import '../component/CocktailList.js';
+var $ = require('jquery');
 
 const main = () => {
-    const heroSearch = document.querySelector('hero-search');
-    const cocktailList = document.querySelector('cocktail-list');
-    const cocktailItem = document.querySelector('cocktail-item');
-    const cocktailDetails = document.querySelector('cocktail-details');
-
+    const heroSearch = $("hero-search")[0];
+    const cocktailList = $("cocktail-list")[0];
     const onButtonSearchClicked = () => {
         DataSource.searchIngredient(heroSearch.value)
         .then(renderResult)
