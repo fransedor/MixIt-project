@@ -30,7 +30,7 @@ class CocktailItem extends HTMLElement {
             font-size: 16px;
         }
         cocktail-item button {
-            background-color: #75DBCD;
+            background-color: #023e8a;
             padding: 8px 16px;
             margin: 16px 0 16px 0;
             border-radius: 8px;
@@ -39,7 +39,7 @@ class CocktailItem extends HTMLElement {
             font-weight: bold;
         }
         cocktail-item button:hover {
-            background-color: #5DAD9A;
+            background-color: #00b4d8;
             cursor: pointer;
         }
         </style>

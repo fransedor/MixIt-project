@@ -5,8 +5,7 @@ import '../component/CocktailList.js';
 const main = () => {
     const heroSearch = document.querySelector('hero-search');
     const cocktailList = document.querySelector('cocktail-list');
-    const cocktailItem = document.querySelector('cocktail-item');
-    const cocktailDetails = document.querySelector('cocktail-details');
+    const contents = document.querySelector('.contents');
 
     const onButtonSearchClicked = () => {
         DataSource.searchIngredient(heroSearch.value)
@@ -15,6 +14,7 @@ const main = () => {
     };
 
     const renderResult = (results) => {
+        contents.style.display = "block";
         cocktailList.drinks = results;
     }
     

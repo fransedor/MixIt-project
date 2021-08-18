@@ -22,6 +22,7 @@ class CocktailDetails extends HTMLElement {
                 top: 0;
                 width: 100%;
                 height: 100%;
+                z-index: 5;
             }
             .details {
                 padding: 16px 20px;
@@ -32,7 +33,7 @@ class CocktailDetails extends HTMLElement {
                 top: 53%;
                 left: 50%;
                 font-family: 'Lato', sans-serif;
-
+                z-index: 6;
                 transform: translate(-50%, -50%);
             }
             .details img {

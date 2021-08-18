@@ -19,7 +19,21 @@ class HeroSearch extends HTMLElement {
             padding: 12px 24px;
             margin: 40px 0px;
             border-radius: 16px;
+            color: white;
+            background-color: #0077b6;
         }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1; /* Firefox */
+          }
+          
+          :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: white;
+          }
+          
+          ::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+          }
         .search input:focus {
             outline: none;
         }
@@ -27,13 +41,13 @@ class HeroSearch extends HTMLElement {
             font-size: 20px;
             border-radius: 16px;
             padding: 12px 24px;
-            background-color: #75DBCD;
+            background-color: #0077b6;
             font-weight: bold;
             color: white;
             border: none;
         }
         .search button:hover {
-            background-color: #5DAD9A;
+            background-color: #00b4d8;
             cursor: pointer;
         }
         </style>

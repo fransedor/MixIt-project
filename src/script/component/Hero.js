@@ -15,11 +15,13 @@ class Hero extends HTMLElement {
             margin: 40px auto;
             height: 400px;
             display: block;
+            position: relative;
+            z-index: 4;
         }
         .hero h1 {
             margin: 0;
             padding: 20px 40px;
-            color: black;
+            color: #03045e;
         }
         @media screen and (max-width: 750px) {
             .hero {

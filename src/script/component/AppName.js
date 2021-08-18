@@ -14,6 +14,8 @@ class AppName extends HTMLElement {
         header {
         font-family: 'MonteCarlo', cursive;
         font-size: 40px;
+        position: relative;
+        z-index: 2;
         }
         header p {
             padding: 8px 40px;
