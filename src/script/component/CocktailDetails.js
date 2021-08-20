@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 class CocktailDetails extends HTMLElement {
     
     set details(details) {
@@ -76,19 +78,21 @@ class CocktailDetails extends HTMLElement {
                 <button id="close-details">Close</button>
             </div>
         </div>`
-        this.querySelector('#close-details').addEventListener('click', function() {
-            const details = document.getElementsByTagName('cocktail-details');
-            details[0].remove();
-        });
-        const ingredientsList = this.querySelector('#list');
+        // this.querySelector('#close-details').addEventListener('click', function() {
+        //     const details = document.getElementsByTagName('cocktail-details');
+        //     details[0].remove();
+        // });
+        $(this).find('#close-details').on('click', function() {
+            $('cocktail-details').remove();
+        })
+        const ingredientsList = $(this).find('#list');
         function ingredient() {
             for (let i = 1; i <=15 ; i++){
                 const ingredient = `strIngredient${i}`
                 const measure = `strMeasure${i}`
                 if (details[ingredient]) {
-                    const list = document.createElement('li');
-                    list.innerText = ` ${details[ingredient]} ${details[measure]}`
-                    ingredientsList.appendChild(list);
+                    const list = `<li>${details[ingredient]} ${details[measure]}</li>`
+                    ingredientsList.append(list);
                 }
             }
         }

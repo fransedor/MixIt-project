@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 class CocktailItem extends HTMLElement {
     set drink(drink) {
         this._drink = drink;
@@ -48,7 +50,8 @@ class CocktailItem extends HTMLElement {
         <h3>${this._drink.strDrink}</h3>
         <button id="drink-details">Make this</button>`
 
-        this.querySelector('#drink-details').addEventListener('click', this._clickEvent);
+        // this.querySelector('#drink-details').addEventListener('click', this._clickEvent);
+        $(this).find('#drink-details').on('click', this._clickEvent);
     }
 }
 customElements.define('cocktail-item', CocktailItem);
